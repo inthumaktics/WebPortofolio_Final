@@ -9,9 +9,9 @@ export default function About() {
       description: 'From UI/UX design and web development to mobile applications and software engineering, continuously exploring new technologies and building practical solutions.',
       icon: <Code className="text-blue-600" size={24} />,
       badges: ['UI/UX', 'Web Dev', 'Flutter'],
-      bgColor: 'bg-blue-50/50 hover:bg-blue-50/80',
-      borderColor: 'border-blue-100',
-      badgeColor: 'bg-blue-100/70 text-blue-700 border-blue-200/50',
+      bgColor: 'bg-blue-50/50 hover:bg-blue-50/80 dark:bg-blue-950/20 dark:hover:bg-blue-950/30',
+      borderColor: 'border-blue-100 dark:border-blue-900/30',
+      badgeColor: 'bg-blue-100/70 text-blue-700 border-blue-200/50 dark:bg-blue-900/40 dark:text-blue-300 dark:border-blue-800/30',
       shadowColor: 'hover:shadow-blue-500/5',
       delay: 0.1,
     },
@@ -21,9 +21,9 @@ export default function About() {
       description: 'Learning machine learning and deep learning while discovering how intelligent systems can solve meaningful real-world challenges.',
       icon: <ShieldCheck className="text-teal-600" size={24} />,
       badges: ['Machine Learning', 'Deep Learning', 'Innovation'],
-      bgColor: 'bg-teal-50/50 hover:bg-teal-50/80',
-      borderColor: 'border-teal-100',
-      badgeColor: 'bg-teal-100/70 text-teal-700 border-teal-200/50',
+      bgColor: 'bg-teal-50/50 hover:bg-teal-50/80 dark:bg-teal-950/20 dark:hover:bg-teal-950/30',
+      borderColor: 'border-teal-100 dark:border-teal-900/30',
+      badgeColor: 'bg-teal-100/70 text-teal-700 border-teal-200/50 dark:bg-teal-900/40 dark:text-teal-300 dark:border-teal-800/30',
       shadowColor: 'hover:shadow-teal-500/5',
       delay: 0.25,
     },
@@ -33,9 +33,9 @@ export default function About() {
       description: 'Passionate about the intersection of technology and human well-being, with a future goal of pursuing Biomedical Engineering and assistive innovation.',
       icon: <Rocket className="text-purple-600" size={24} />,
       badges: ['Biomedical Engineering', 'Healthcare Tech', 'Future Research'],
-      bgColor: 'bg-purple-50/50 hover:bg-purple-50/80',
-      borderColor: 'border-purple-100',
-      badgeColor: 'bg-purple-100/70 text-purple-700 border-purple-200/50',
+      bgColor: 'bg-purple-50/50 hover:bg-purple-50/80 dark:bg-purple-950/20 dark:hover:bg-purple-950/30',
+      borderColor: 'border-purple-100 dark:border-purple-900/30',
+      badgeColor: 'bg-purple-100/70 text-purple-700 border-purple-200/50 dark:bg-purple-900/40 dark:text-purple-300 dark:border-purple-800/30',
       shadowColor: 'hover:shadow-purple-500/5',
       delay: 0.4,
     },
@@ -75,10 +75,10 @@ export default function About() {
               <div>
                 {/* Header Row */}
                 <div className="flex justify-between items-start mb-6">
-                  <div className="p-3.5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-3.5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-sm group-hover:scale-110 transition-transform duration-300">
                     {card.icon}
                   </div>
-                  <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest bg-white dark:bg-slate-900 border border-slate-200/40 dark:border-slate-800/60 rounded-full px-3 py-1">
+                  <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest bg-white dark:bg-slate-800 border border-slate-200/40 dark:border-slate-700 rounded-full px-3 py-1">
                     Core Focus
                   </span>
                 </div>
