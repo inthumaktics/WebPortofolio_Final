@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-hover: #1E40AF;
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F9FAFB;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-border-primary: #E5E7EB;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Base custom styles and overrides */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark-glass {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  transition: background-color 0.3s ease;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom sky gradient stops for Mount Fuji sunset transition */
+.sky-grad-stop-1 {
+  transition: stop-color 0.3s ease;
+}
+.sky-grad-stop-2 {
+  transition: stop-color 0.3s ease;
+}
+.dark .sky-grad-stop-1 {
+  stop-color: #0b1528 !important;
+}
+.dark .sky-grad-stop-2 {
+  stop-color: #020617 !important;
+}
+
+/* Sun to Moon transition */
+.sun-grad-stop-1 {
+  transition: stop-color 0.3s ease;
+}
+.sun-grad-stop-2 {
+  transition: stop-color 0.3s ease;
+}
+.dark .sun-grad-stop-1 {
+  stop-color: #e2e8f0 !important;
+}
+.dark .sun-grad-stop-2 {
+  stop-color: #94a3b8 !important;
+}
+
+/* Mount Fuji & Hills night transitions */
+.fuji-body {
+  fill: #1e293b;
+  transition: fill 0.3s ease;
+}
+.dark .fuji-body {
+  fill: #0b0f19 !important;
+}
+
+.fuji-cap {
+  fill: #ffffff;
+  transition: fill 0.3s ease;
+}
+.dark .fuji-cap {
+  fill: #94a3b8 !important;
+}
+
+.hill-1 {
+  fill: #0f172a;
+  transition: fill 0.3s ease;
+}
+.dark .hill-1 {
+  fill: #040813 !important;
+}
+
+.hill-2 {
+  fill: #0b0f19;
+  transition: fill 0.3s ease;
+}
+.dark .hill-2 {
+  fill: #010204 !important;
+}
+
+/* Pagoda & Torii Gate */
+.japanese-red {
+  fill: #e11d48;
+  transition: fill 0.3s ease;
+}
+.dark .japanese-red {
+  fill: #9f1239 !important;
+}
+
+.japanese-dark-wood {
+  fill: #1e293b;
+  transition: fill 0.3s ease;
+}
+.dark .japanese-dark-wood {
+  fill: #0f172a !important;
+}
+
+/* Roof Gradient */
+.roof-grad-stop-1 {
+  transition: stop-color 0.3s ease;
+}
+.roof-grad-stop-2 {
+  transition: stop-color 0.3s ease;
+}
+.dark .roof-grad-stop-1 {
+  stop-color: #9f1239 !important;
+}
+.dark .roof-grad-stop-2 {
+  stop-color: #4c0519 !important;
+}
+
+/* Clouds and Branches */
+.cloud-path {
+  fill: #e2e8f0;
+  transition: fill 0.3s ease;
+}
+.dark .cloud-path {
+  fill: #1e293b !important;
+}
+
+.cherry-branch {
+  stroke: #2d3748;
+  transition: stroke 0.3s ease;
+}
+.dark .cherry-branch {
+  stroke: #1e293b !important;
+}
+
+.cherry-petal-light {
+  fill: #fda4af;
+  transition: fill 0.3s ease;
+}
+.dark .cherry-petal-light {
+  fill: #f43f5e !important;
+}
+
+.cherry-petal-dark {
+  fill: #f43f5e;
+  transition: fill 0.3s ease;
+}
+.dark .cherry-petal-dark {
+  fill: #9f1239 !important;
+}
