@@ -42,6 +42,9 @@ function App() {
         {/* About Me Section */}
         <About />
 
+        {/* Core Technologies Section */}
+        <CoreTechnologies />
+
         {/* Journey Section */}
         <Journey />
 
@@ -53,9 +56,6 @@ function App() {
 
         {/* Achievements Section */}
         <Achievements />
-
-        {/* Core Technologies Section */}
-        <CoreTechnologies />
 
         {/* Contact Section */}
         <Contact />
