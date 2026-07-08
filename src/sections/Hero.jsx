@@ -6,7 +6,7 @@ import erikaProfile from '../assets/fotocv3_erika.png';
 export default function Hero() {
   const socialLinks = [
     { name: 'GitHub', icon: <Github size={18} />, url: 'https://github.com/inthumaktics' },
-    { name: 'LinkedIn', icon: <Linkedin size={18} />, url: 'https://www.linkedin.com/in/erika-ayu-febrianti-32a024286/' },
+    { name: 'LinkedIn', icon: <Linkedin size={18} />, url: 'https://www.linkedin.com/in/erika-ayu-febrianti' },
     { name: 'Instagram', icon: <Instagram size={18} />, url: 'https://instagram.com/inthumaktics' },
   ];
 
