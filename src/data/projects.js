@@ -1,74 +1,50 @@
 // Import Project Thumbnails
 import lifeupMockup from '../assets/lifeup_mockup.png';
-import refocusMockup from '../assets/refocus_mockup.png';
-import portfolioMockup from '../assets/portfolio_mockup.png';
-import aiProjectsMockup from '../assets/ai_projects_mockup.png';
-import biomedicalProjectsMockup from '../assets/biomedical_projects_mockup.png';
+import portofolioMockup from '../assets/portofolio_mockup.png';
 import xploroMockup from '../assets/xploro_mockup.png';
-import dedkostMockup from '../assets/dedkost_mockup.png';
+import dedkostMockup from '../assets/ded-kost_mockup.png';
 import dreamteamMockup from '../assets/dreamteam_mockup.png';
-import performMockup from '../assets/perform_mockup.png';
-import gotouristMockup from '../assets/gotourist_mockup.png';
-import imaniqMockup from '../assets/imaniq_mockup.png';
-import internshipMockup from '../assets/internship_mockup.png';
-import researchMockup from '../assets/research_mockup.png';
+import performMockup from '../assets/readytoperform_mockup.png';
+import gotouristMockup from '../assets/Go-Tourist_Mockup.png';
+import motiefyMockup from '../assets/motiefy_mockup.png';
+import lifeupMockupWebVer from '../assets/life-up_webver.png';
+
 
 export const projectsData = [
   // --- PERSONAL PROJECTS ---
   {
-    name: 'Life-Up',
+    name: 'Life-Up Mobile Version',
     description: 'A comprehensive self-management web application featuring schedule planners, habit trackers, and progress analytics dashboards.',
     thumbnail: lifeupMockup,
-    techStack: ['React', 'Tailwind CSS', 'Zustand', 'LocalStorage'],
-    role: 'Full Stack Developer',
+    techStack: ['Flutter', 'Dart', 'Firebase', 'Node.js'],
+    role: 'Mobile Developer',
     projectType: 'personal',
-    status: 'Completed',
+    status: 'In Progress',
     githubUrl: 'https://github.com',
     liveUrl: 'https://github.com',
     documentationUrl: 'https://github.com'
   },
-  {
-    name: 'ReFocus',
-    description: 'A minimalist Pomodoro focus timer and site blocker dashboard designed to eliminate digital distractions and maximize deep work efficiency.',
-    thumbnail: refocusMockup,
-    techStack: ['React', 'Tailwind CSS', 'Framer Motion', 'Web Storage'],
-    role: 'Frontend Developer',
-    projectType: 'personal',
-    status: 'Completed',
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://github.com'
-  },
-  {
-    name: 'Portfolio Website',
-    description: 'A premium, highly interactive developer portfolio website highlighting project categories, learning journeys, and visual design aesthetics.',
-    thumbnail: portfolioMockup,
-    techStack: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    {
+    name: 'Portofolio Website',
+    description: 'A modern personal portofolio website designed to showcase my projects, learning journey, achievements, certifications, and professional experience. Built with a clean, responsive, and storytelling-focused design to strengthen my personal brand as an Information Systems student pursuing software engineering, artificial intelligence, and biomedical engineering.',
+    thumbnail: portofolioMockup,
+    techStack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'React Router', 'Lucide React', 'Vercel'],
     role: 'Frontend Developer & Designer',
     projectType: 'personal',
     status: 'Completed',
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://github.com'
+    githubUrl: 'https://github.com/inthumaktics/WebPortofolio_Final',
+    liveUrl: 'https://erikayfebti.vercel.app/'
   },
   {
-    name: 'Future AI Projects',
-    description: 'Conceptual prototypes and research exploring neural network architectures, machine learning models, and predictive algorithms.',
-    thumbnail: aiProjectsMockup,
-    techStack: ['Python', 'TensorFlow', 'PyTorch', 'Flask', 'React'],
-    role: 'Machine Learning Engineer',
+    name: 'Life-Up Web Version',
+    description: 'A comprehensive self-management web application featuring schedule planners, habit trackers, and progress analytics dashboards.',
+    thumbnail: lifeupMockupWebVer,
+    techStack: ['React', 'Tailwind CSS', 'Next.js', 'Lucide'],
+    role: 'Full Stack Developer',
     projectType: 'personal',
-    status: 'Research',
-    githubUrl: 'https://github.com',
-    prototypeUrl: 'https://github.com'
-  },
-  {
-    name: 'Future Biomedical Projects',
-    description: 'Exploring physiological signal analysis (ECG/EEG), medical sensor integration, and interactive data visualization for healthcare applications.',
-    thumbnail: biomedicalProjectsMockup,
-    techStack: ['Signal Processing', 'Python', 'Arduino', 'React', 'Chart.js'],
-    role: 'Research & UX',
-    projectType: 'personal',
-    status: 'Research',
-    documentationUrl: 'https://github.com'
+    status: 'Completed',
+    githubUrl: 'https://github.com/inthumaktics/PROJECT_Life-UP_Web',
+    liveUrl: 'https://life-up-web-ver.vercel.app'
   },
 
   // --- TEAM PROJECTS ---
@@ -80,83 +56,64 @@ export const projectsData = [
     role: 'Project Lead',
     projectType: 'team',
     status: 'Completed',
-    githubUrl: 'https://github.com',
+    githubUrl: 'https://github.com/inthumaktics/XPLORO_TEKWEB',
     liveUrl: 'https://github.com',
-    videoUrl: 'https://github.com'
+    // videoUrl: 'https://github.com'
   },
-  {
-    name: 'DED-Kost',
-    description: 'A digital boarding house management system facilitating room availability tracking, digital payment history, and tenant-landlord communication.',
-    thumbnail: dedkostMockup,
-    techStack: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS', 'Bootstrap'],
-    role: 'Backend Developer',
-    projectType: 'team',
-    status: 'Completed',
-    githubUrl: 'https://github.com',
-    caseStudyUrl: 'https://github.com'
-  },
-  {
-    name: 'Dream Team Manager',
-    description: 'A collaboration board and matching portal designed for academic cohorts to find teammates, align skills, and assign project roles.',
-    thumbnail: dreamteamMockup,
-    techStack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS'],
-    role: 'Full Stack Developer',
-    projectType: 'team',
-    status: 'Academic',
-    githubUrl: 'https://github.com',
-    documentationUrl: 'https://github.com'
-  },
-  {
+    {
     name: 'Ready To Perform',
     description: 'A performance analytics mobile app for track-and-field athletes to monitor daily physical readiness, recovery levels, and fatigue markers.',
     thumbnail: performMockup,
-    techStack: ['Flutter', 'Dart', 'Firebase', 'Node.js'],
-    role: 'Mobile Developer',
+    techStack: ['React', 'React Router', 'Vite', 'Vercel', 'TensorFlow', 'Scikit-Learn','DL Multi-Input Neural Network'],
+    role: 'AI Engineer',
     projectType: 'team',
-    status: 'Prototype',
-    prototypeUrl: 'https://github.com',
-    videoUrl: 'https://github.com'
+    status: 'Completed',
+    liveUrl: 'https://capstone-project-main-six.vercel.app/',
+    githubUrl: 'https://github.com/CC26-PSU078/Capstone-Project',
   },
   {
+    name: 'DED-Kost',
+    description: 'A responsive front-end boarding house rental website featuring property search, recommendations, WhatsApp booking integration, and an admin panel for listing management.',
+    thumbnail: dedkostMockup,
+    techStack: ['Tailwind CSS', 'React', 'Next.js', 'Vite', 'Vercel'],
+    role: 'Front-end User Developer',
+    projectType: 'team',
+    status: 'Completed',
+    githubUrl: 'https://github.com/inthumaktics/DED-kost_Project_TEKWEB',
+    liveUrl: 'https://ded-kost-project-tekweb.vercel.app/'
+  },
+  {
+    name: 'Dream Team Manager - IS Mini Hackathon 2025 ',
+    description: 'A collaboration board and matching portal designed for academic cohorts to find teammates, align skills, and assign project roles.',
+    thumbnail: dreamteamMockup,
+    techStack: ['React','Vite', 'Tailwind CSS', 'Vercel'],
+    role: 'Front-end Developer',
+    projectType: 'team',
+    status: 'Completed',
+    githubUrl: 'https://github.com/inthumaktics/DREAM-TEAM-MANAGER_TEKWEB',
+    liveUrl: 'https://dream-team-manager-tekweb.vercel.app/'
+  },
+
+    {
+    name: 'Motiefy',
+    description: 'A collaborative UI/UX design project for a digital marketplace that empowers Indonesian batik artisans and promotes sustainable fashion. The platform connects customers with authentic batik products, recycled batik crafts, custom batik services, AI-powered virtual try-on, and educational content to support local UMKM and preserve Indonesia\'s cultural heritage.',
+    thumbnail: motiefyMockup,
+    techStack: ['Figma', 'Canva'],
+    role: 'UI/UX Designer',
+    projectType: 'team',
+    status: 'Completed',
+    prototypeUrl: 'https://www.figma.com/proto/ZrW8MQODIp5H7p2DRUdAsy/BATIK?node-id=479-1274&t=1We6X17Dq5FuPl6S-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=137%3A236&show-proto-sidebar=1'
+  },
+
+    {
     name: 'Go Tourist',
     description: 'A collaborative trip planner web application featuring shared expense tracking, destination voting, and interactive joint packing check-lists.',
     thumbnail: gotouristMockup,
-    techStack: ['React', 'Firebase', 'Tailwind CSS', 'Node.js', 'Express'],
-    role: 'Frontend Developer',
+    techStack: ['Figma', 'Canva'],
+    role: 'UI/UX Designer',
     projectType: 'team',
-    status: 'Academic',
-    githubUrl: 'https://github.com',
-    prototypeUrl: 'https://github.com'
+    status: 'Completed',
+    prototypeUrl: 'https://www.figma.com/proto/REqASWKiufUrW2m0eQNFQr/Go-Tourist-New?node-id=212-282&t=TCfW2gwL2hIrLfTz-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=214%3A113'
   },
-  {
-    name: 'ImanIQ',
-    description: 'A gamified Islamic education and daily prayer tracking mobile app. Features location-based prayer times, Salah reminders, and Quranic quizzes.',
-    thumbnail: imaniqMockup,
-    techStack: ['Kotlin', 'Android SDK', 'Jetpack Compose', 'Firebase'],
-    role: 'Mobile Developer & UI/UX',
-    projectType: 'team',
-    status: 'Competition',
-    githubUrl: 'https://github.com',
-    videoUrl: 'https://github.com',
-    caseStudyUrl: 'https://github.com'
-  },
-  {
-    name: 'Future Internship Projects',
-    description: 'Upcoming collaborative software engineering engagements focused on enterprise system architectures, CI/CD, and agile sprint workflows.',
-    thumbnail: internshipMockup,
-    techStack: ['TypeScript', 'React', 'Docker', 'Git', 'Agile'],
-    role: 'Full Stack Developer',
-    projectType: 'team',
-    status: 'In Progress'
-  },
-  {
-    name: 'Future Research Projects',
-    description: 'Collaborative academic research and software prototyping exploring human-computer interaction, web accessibility, and health informatics.',
-    thumbnail: researchMockup,
-    techStack: ['Data Analysis', 'Python', 'React', 'Jupyter', 'R'],
-    role: 'Research & UX',
-    projectType: 'team',
-    status: 'Research',
-    documentationUrl: 'https://github.com'
-  }
+
 ];
