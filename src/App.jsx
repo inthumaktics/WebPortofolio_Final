@@ -5,9 +5,8 @@ import About from './sections/About';
 import Journey from './sections/Journey';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
-import Skills from './sections/Skills';
+import CoreTechnologies from './sections/CoreTechnologies';
 import Achievements from './sections/Achievements';
-import FutureVision from './sections/FutureVision';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
@@ -52,14 +51,11 @@ function App() {
         {/* Experience Section */}
         <Experience />
 
-        {/* Skills Section */}
-        <Skills />
-
         {/* Achievements Section */}
         <Achievements />
 
-        {/* Future Vision Section */}
-        <FutureVision />
+        {/* Core Technologies Section */}
+        <CoreTechnologies />
 
         {/* Contact Section */}
         <Contact />
