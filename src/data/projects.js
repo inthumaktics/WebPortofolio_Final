@@ -1,13 +1,14 @@
 // Import Project Thumbnails
-import lifeupMockup from '../assets/lifeup_mockup.png';
-import portofolioMockup from '../assets/portofolio_mockup.png';
-import xploroMockup from '../assets/xploro_mockup.png';
-import dedkostMockup from '../assets/ded-kost_mockup.png';
-import dreamteamMockup from '../assets/dreamteam_mockup.png';
-import performMockup from '../assets/readytoperform_mockup.png';
+import lifeupMockup from '../assets/life-up_app.png';
+import portofolioMockup from '../assets/portofolio_web.png';
+import xploroMockup from '../assets/xploro_app.png';
+import dedkostMockup from '../assets/ded-kost_web.png';
+import dreamteamMockup from '../assets/dreamteam_web.png';
+import performMockup from '../assets/readytoperform_web.png';
 import gotouristMockup from '../assets/Go-Tourist_Mockup.png';
 import motiefyMockup from '../assets/motiefy_mockup.png';
-import lifeupMockupWebVer from '../assets/life-up_webver.png';
+import lifeupMockupWebVer from '../assets/life-up_web.png';
+import prismaWeb from '../assets/prisma_web.png'
 
 
 export const projectsData = [
@@ -52,10 +53,10 @@ export const projectsData = [
     name: 'XPLORO',
     description: 'An AI-powered smart tourism platform for international visitors in Indonesia. Features real-time guide translation and customized itineraries.',
     thumbnail: xploroMockup,
-    techStack: ['React', 'Node.js', 'Express', 'MySQL', 'Tailwind CSS', 'OpenAI API'],
+    techStack: ['Dart', 'Flutter', 'PWA'],
     role: 'Project Lead',
     projectType: 'team',
-    status: 'Completed',
+    status: 'In Progress',
     githubUrl: 'https://github.com/inthumaktics/XPLORO_TEKWEB',
     liveUrl: 'https://github.com',
     // videoUrl: 'https://github.com'
@@ -70,6 +71,17 @@ export const projectsData = [
     status: 'Completed',
     liveUrl: 'https://capstone-project-main-six.vercel.app/',
     githubUrl: 'https://github.com/CC26-PSU078/Capstone-Project',
+  },
+  {
+    name: 'Prisma',
+    description: 'A digital platform designed to assess ESG credibility by cross-verifying corporate sustainability reports with trusted external data sources, helping investors and regulators identify potential greenwashing.',
+    thumbnail: prismaWeb,
+    techStack: ['Tailwind CSS', 'React', 'Vite', 'Vercel'],
+    role: 'Front-end Developer',
+    projectType: 'team',
+    status: 'In Progress',
+    githubUrl: 'https://github.com/inthumaktics/prisma',
+    liveUrl: 'https://prisma-esg-credibility.vercel.app/'
   },
   {
     name: 'DED-Kost',

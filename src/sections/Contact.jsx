@@ -9,9 +9,9 @@ export default function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const contactInfos = [
-    { name: 'Email', value: 'erikaayufebrianti@gmail.com', icon: <Mail size={18} />, href: 'mailto:erikaayufebrianti@gmail.com' },
+    { name: 'Email', value: 'erikaayufebrianti@gmail.com', icon: <Mail size={18} />, href: 'mailto:erikaayufebrianti@gmail.com'},
     { name: 'GitHub', value: 'inthumaktics', icon: <Github size={18} />, href: 'https://github.com/inthumaktics' },
-    { name: 'LinkedIn', value: 'erika ayu febrianti', icon: <Linkedin size={18} />, href: 'https://www.linkedin.com/in/erika-ayu-febrianti-32a024286/' },
+    { name: 'LinkedIn', value: 'erika ayu febrianti', icon: <Linkedin size={18} />, href: 'https://www.linkedin.com/in/erika-ayu-febrianti' },
     { name: 'Instagram', value: '@erikayfebti', icon: <Instagram size={18} />, href: 'https://instagram.com/erikayfebti' },
   ];
 
