@@ -3,8 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Mail, CheckCircle2 } from 'lucide-react';
 import { Github, Linkedin, Instagram } from '../components/Icons';
 
+const WHATSAPP_NUMBER = 'YOUR_PHONE_NUMBER'; // Replace with your WhatsApp number, e.g. '6281234567890'
+
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -18,18 +21,75 @@ export default function Contact() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = 'Full name is required';
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email address is required';
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email.trim())) {
+        newErrors.email = 'Invalid email address';
+      }
+    }
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Subject is required';
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate submission delay
+
+    // Simulate redirection delay for better UX
     setTimeout(() => {
+      const messageText = `Hello Erika 👋
+
+I visited your portfolio website and would like to get in touch.
+
+────────────────────
+
+Name:
+${formData.name.trim()}
+
+Email:
+${formData.email.trim()}
+
+Subject:
+${formData.subject.trim()}
+
+Message:
+${formData.message.trim()}
+
+────────────────────
+
+Sent from your Portfolio Website`;
+
+      const encodedMessage = encodeURIComponent(messageText);
+      const whatsappUrl = `https://wa.me/${6283113165020}?text=${encodedMessage}`;
+
+      // Open WhatsApp in a new tab (desktop) or in the app (mobile)
+      window.open(whatsappUrl, '_blank');
+
       setIsSubmitting(false);
       setIsSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setErrors({});
+
       // Reset success message after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
     }, 1500);
@@ -93,6 +153,7 @@ export default function Contact() {
                     key="form"
                     onSubmit={handleSubmit}
                     className="flex flex-col gap-6 text-left"
+                    noValidate
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -110,8 +171,17 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-primary dark:focus:border-blue-500 focus:ring-1 focus:ring-primary dark:focus:ring-blue-500 transition-all"
+                        className={`w-full bg-white dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 transition-all ${
+                          errors.name
+                            ? 'border-rose-500 dark:border-rose-500 focus:border-rose-500 focus:ring-rose-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-blue-500 focus:ring-primary dark:focus:ring-blue-500'
+                        }`}
                       />
+                      {errors.name && (
+                        <span className="text-xs text-rose-500 dark:text-rose-400 mt-1 font-medium">
+                          {errors.name}
+                        </span>
+                      )}
                     </div>
 
                     {/* Email input */}
@@ -127,8 +197,43 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="john@example.com"
-                        className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-primary dark:focus:border-blue-500 focus:ring-1 focus:ring-primary dark:focus:ring-blue-500 transition-all"
+                        className={`w-full bg-white dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 transition-all ${
+                          errors.email
+                            ? 'border-rose-500 dark:border-rose-500 focus:border-rose-500 focus:ring-rose-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-blue-500 focus:ring-primary dark:focus:ring-blue-500'
+                        }`}
                       />
+                      {errors.email && (
+                        <span className="text-xs text-rose-500 dark:text-rose-400 mt-1 font-medium">
+                          {errors.email}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Subject input */}
+                    <div className="flex flex-col gap-1.5">
+                      <label htmlFor="subject" className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                        Subject
+                      </label>
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        required
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="Collaboration inquiry"
+                        className={`w-full bg-white dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 transition-all ${
+                          errors.subject
+                            ? 'border-rose-500 dark:border-rose-500 focus:border-rose-500 focus:ring-rose-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-blue-500 focus:ring-primary dark:focus:ring-blue-500'
+                        }`}
+                      />
+                      {errors.subject && (
+                        <span className="text-xs text-rose-500 dark:text-rose-450 mt-1 font-medium">
+                          {errors.subject}
+                        </span>
+                      )}
                     </div>
 
                     {/* Message textarea */}
@@ -144,8 +249,17 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Hi Erika, I'd love to collaborate on..."
-                        className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-primary dark:focus:border-blue-500 focus:ring-1 focus:ring-primary dark:focus:ring-blue-500 transition-all resize-none"
+                        className={`w-full bg-white dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 transition-all resize-none ${
+                          errors.message
+                            ? 'border-rose-500 dark:border-rose-500 focus:border-rose-500 focus:ring-rose-500'
+                            : 'border-slate-200 dark:border-slate-800 focus:border-primary dark:focus:border-blue-500 focus:ring-primary dark:focus:ring-blue-500'
+                        }`}
                       />
+                      {errors.message && (
+                        <span className="text-xs text-rose-500 dark:text-rose-400 mt-1 font-medium">
+                          {errors.message}
+                        </span>
+                      )}
                     </div>
 
                     {/* Submit Button */}
@@ -154,7 +268,7 @@ export default function Contact() {
                       disabled={isSubmitting}
                       className="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover disabled:bg-blue-400 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200 w-full shadow-lg shadow-blue-600/10 hover:shadow-blue-600/20 active:scale-95 cursor-pointer disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      {isSubmitting ? 'Redirecting you to WhatsApp...' : 'Send Message'}
                       <Send size={15} />
                     </button>
                   </motion.form>
@@ -170,10 +284,10 @@ export default function Contact() {
                       <CheckCircle2 size={40} className="animate-bounce" />
                     </div>
                     <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">
-                      Message Sent Successfully!
+                      Redirected to WhatsApp!
                     </h3>
                     <p className="text-xs text-slate-550 dark:text-slate-400 max-w-xs leading-relaxed">
-                      Thank you for reaching out. Erika will get back to you as soon as possible.
+                      Thank you for reaching out. Please send the pre-filled message in WhatsApp to get in touch.
                     </p>
                   </motion.div>
                 )}

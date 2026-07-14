@@ -1,14 +1,14 @@
 // Import Project Thumbnails
-import lifeupMockup from '../assets/life-up_app.png';
-import portofolioMockup from '../assets/portofolio_web.png';
-import xploroMockup from '../assets/xploro_app.png';
-import dedkostMockup from '../assets/ded-kost_web.png';
-import dreamteamMockup from '../assets/dreamteam_web.png';
-import performMockup from '../assets/readytoperform_web.png';
-import gotouristMockup from '../assets/Go-Tourist_Mockup.png';
-import motiefyMockup from '../assets/motiefy_mockup.png';
-import lifeupMockupWebVer from '../assets/life-up_web.png';
-import prismaWeb from '../assets/prisma_web.png'
+import lifeupMockup from '../assets/projects/life-up_app.png';
+import portofolioMockup from '../assets/projects/portofolio_web.png';
+import xploroMockup from '../assets/projects/xploro_app.png';
+import dedkostMockup from '../assets/projects/ded-kost_web.png';
+import dreamteamMockup from '../assets/projects/dreamteam_web.png';
+import performMockup from '../assets/projects/readytoperform_web.png';
+import gotouristMockup from '../assets/projects/Go-Tourist_Mockup.png';
+import motiefyMockup from '../assets/projects/motiefy_mockup.png';
+import lifeupMockupWebVer from '../assets/projects/life-up_web.png';
+import prismaWeb from '../assets/projects/prisma_web.png'
 
 
 export const projectsData = [
