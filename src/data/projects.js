@@ -9,6 +9,9 @@ import gotouristMockup from '../assets/projects/Go-Tourist_Mockup.png';
 import motiefyMockup from '../assets/projects/motiefy_mockup.png';
 import lifeupMockupWebVer from '../assets/projects/life-up_web.png';
 import prismaWeb from '../assets/projects/prisma_web.png'
+import prismaWebv3 from '../assets/projects/prisma_web-v3.png'
+import refocusMockup from '../assets/projects/ReFocus_mockup.png'
+
 
 
 export const projectsData = [
@@ -54,7 +57,7 @@ export const projectsData = [
     description: 'An AI-powered smart tourism platform for international visitors in Indonesia. Features real-time guide translation and customized itineraries.',
     thumbnail: xploroMockup,
     techStack: ['Dart', 'Flutter', 'PWA'],
-    role: 'Project Lead',
+    role: 'Fullstack Developer',
     projectType: 'team',
     status: 'In Progress',
     githubUrl: 'https://github.com/inthumaktics/XPLORO_TEKWEB',
@@ -72,6 +75,28 @@ export const projectsData = [
     liveUrl: 'https://capstone-project-main-six.vercel.app/',
     githubUrl: 'https://github.com/CC26-PSU078/Capstone-Project',
   },
+   {
+    name: 'Prisma versi 3',
+    description: 'A digital platform designed to assess ESG credibility by cross-verifying corporate sustainability reports with trusted external data sources, helping investors and regulators identify potential greenwashing.',
+    thumbnail: prismaWebv3,
+    techStack: ['Tailwind CSS', 'React', 'Vite', 'Vercel'],
+    role: 'UI/UX Designer & Front-end Developer',
+    projectType: 'team',
+    status: 'In Progress',
+    githubUrl: 'https://github.com/inthumaktics/Prisma_v3',
+    liveUrl: 'https://prisma-esg-credibility-v3.vercel.app/'
+  },
+     {
+    name: 'ReFocus',
+    description: 'A digital wellbeing app to reduce social media distraction and improve student productivity',
+    thumbnail: refocusMockup,
+    techStack: ['Flutter', 'Firebase', 'Figma'],
+    role: 'UI/UX Designer',
+    projectType: 'team',
+    status: 'Completed',
+    githubUrl: 'https://github.com/Refocus-Team/ReFocus',
+    // liveUrl: 'https://prisma-esg-credibility-v3.vercel.app/'
+  },
   {
     name: 'Prisma',
     description: 'A digital platform designed to assess ESG credibility by cross-verifying corporate sustainability reports with trusted external data sources, helping investors and regulators identify potential greenwashing.',
@@ -79,7 +104,7 @@ export const projectsData = [
     techStack: ['Tailwind CSS', 'React', 'Vite', 'Vercel'],
     role: 'Front-end Developer',
     projectType: 'team',
-    status: 'In Progress',
+    status: 'Completed',
     githubUrl: 'https://github.com/inthumaktics/prisma',
     liveUrl: 'https://prisma-esg-credibility.vercel.app/'
   },

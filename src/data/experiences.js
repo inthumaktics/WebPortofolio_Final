@@ -17,7 +17,7 @@ export const experiences = [
   },
   {
     year: '2023',
-    date: '2023',
+    date: '2023 - 2024',
     title: 'Production Coordinator',
     organization: 'PT Raindo Putra Lestari',
     category: 'Work',
@@ -48,6 +48,27 @@ export const experiences = [
     link: ''
   },
   {
+    year: '2024',
+    date: '2024 - Present',
+    title: 'Moderator & Student Speaker',
+    organization: 'National Student Seminar, Universitas Ahmad Dahlan',
+    category: 'Leadership',
+    status: 'Ongoing',
+    duration: 'Multiple Events',
+    description: [
+      'Moderated academic seminars and public discussions attended by university students and invited speakers.',
+      'Introduced speakers, facilitated Q&A sessions, and ensured smooth event flow throughout multiple seminar series.',
+      'Served as a student speaker in selected seminar sessions, delivering presentations and sharing insights with participants.'
+    ],
+    tools: [
+      'Public Speaking',
+      'Event Moderation',
+      'Communication',
+      'Presentation'
+    ],
+    link: ''
+  },
+  {
     year: '2026',
     date: '2026 - Present',
     title: 'Student Counselor',
@@ -64,19 +85,26 @@ export const experiences = [
     link: ''
   },
   {
-    year: '2026',
-    date: '2026 - Present',
+    year: '2025',
+    date: '2025 - 2026',
     title: 'Practical Assistant',
     organization: 'Universitas Ahmad Dahlan',
-    category: 'Assistant',
+    category: 'Teaching',
     status: 'Current',
-    duration: '2026 - Present',
+    duration: '2025 - Present',
     description: [
-      'Assisting laboratory sessions and practical coursework.',
-      'Helping students understand programming, databases, and system analysis materials.',
-      'Supporting lecturers in grading, managing class dynamics, and executing learning activities.'
+      'Facilitated practical sessions for Programming Fundamentals, Programming Algorithms, Business Process Analysis, and Database Concepts.',
+      'Guided students in using Python, Bizagi Modeler, MySQL, and SQLyog through hands-on laboratory activities.',
+      'Assessed practical reports, provided technical feedback, and supported students in solving programming and database-related challenges.'
     ],
-    tools: ['Java', 'SQL', 'Teaching', 'Code Review'],
+    tools: [
+      'Python',
+      'Bizagi Modeler',
+      'MySQL',
+      'SQLyog',
+      'Teaching',
+      'Code Review'
+    ],
     link: ''
   },
   {
