@@ -34,6 +34,8 @@ const categoryColors = {
 const iconColors = {
   Internship: 'text-blue-500 dark:text-blue-400',
   Work: 'text-indigo-500 dark:text-indigo-400',
+  Student: 'text-indigo-500 dark:text-indigo-400',
+  Leadership: 'text-blue-500 dark:text-blue-400',
   Organization: 'text-orange-500 dark:text-orange-400',
   Volunteer: 'text-emerald-500 dark:text-emerald-400',
   Assistant: 'text-green-500 dark:text-green-400',
@@ -390,7 +392,7 @@ export default function Experience() {
                             opacity: { duration: 0.25, ease: 'easeOut', delay: nodeDelay }
                           }}
                         >
-                          <span className={iconColors[item.category] || 'text-slate-655 dark:text-slate-350'}>
+                          <span className={iconColors[item.category] || 'text-slate-500 dark:text-slate-400'}>
                             {getCategoryIcon(item.category)}
                           </span>
                         </motion.div>
@@ -594,7 +596,7 @@ export default function Experience() {
                   <div className="flex items-center gap-4 relative">
                     <div className={`absolute -left-[28px] top-1/2 -translate-y-1/2 flex items-center justify-center bg-white dark:bg-slate-900 border rounded-full shadow-sm z-10 ${isCurrent ? 'w-8 h-8 -left-[29px]' : 'w-7 h-7'
                       } ${glowClass}`}>
-                      <span className={iconColors[item.category] || 'text-slate-655 dark:text-slate-350'}>
+                      <span className={iconColors[item.category] || 'text-slate-500 dark:text-slate-400'}>
                         {getCategoryIcon(item.category)}
                       </span>
                     </div>

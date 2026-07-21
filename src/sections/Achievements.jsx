@@ -298,7 +298,7 @@ function AchievementSlider({ certificates, onPreviewCert, onPreviewDomain }) {
               } else {
                 return (
                   <CertificateCard
-                    key={item.title}
+                    key={`${item.title}-${item.issuer}`}
                     cert={item}
                     onPreview={onPreviewCert}
                   />
